@@ -17,35 +17,46 @@ table.AddPlayer('D',1000) //3
 table.StartGame()
 
 
-table.players[1].Fold();
-table.players[2].Bet(200);
-printInfo(3);
+table.players[1].Call();
+table.players[2].Call();
 table.players[3].Call();
-printInfo(3);
+table.players[0].Call();
+table.players[1].Bet(200);
+table.players[2].Fold();
+table.players[3].Fold();
+table.players[0].Fold();
+table.players[1].Call();
+table.players[2].Call();
+table.players[3].Call();
 table.players[0].Call();
 table.players[1].Call();
 table.players[2].Call();
 table.players[3].Call();
 table.players[0].Call();
-table.players[1].Bet(50);
-table.players[2].Bet(100);
-table.players[3].Call();
-table.players[0].Call();
-table.players[1].Call();
-table.players[2].Call();
-table.players[3].Call();
-// table.players[3].Bet(1000);
-table.players[0].Call();
+// table.players[0].Call();
+// table.players[1].Call();
+// table.players[2].Call();
+// table.players[3].Call();
+// // table.players[3].Bet(1000);
+// table.players[0].Call();
+
 
 printInfo(1);
 printInfo(2);
 printInfo(3);
+printInfo(0);
+
 
 console.log("***********************************TABLE**************************************");
 console.log(table.game);
 console.log("*************************************************************************");
 
-// table.initNewRound()
+table.NewRound()
+printInfo(1);
+printInfo(2);
+printInfo(3);
+printInfo(0);
+
 
 function printInfo(playerId){
     console.log("*************************************************************************");
